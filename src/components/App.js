@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import Stats from './Stats';
 
 class App extends Component {
   constructor(props) {
@@ -55,26 +55,13 @@ class App extends Component {
     return (
       <div className="container">
         <h1>Stat Calculator</h1>
-        <div>
-          <p>LEVEL: {level}</p>
-          <button onClick={this.handleLevelUp}>Level Up</button>
-
-          <p>STR: {stats.str}</p>
-          <button onClick={() => this.handleIncrementStat('str')}>+</button>
-          <button onClick={() => this.handleDecrementStat('str')}>-</button>
-
-          <p>INT: {stats.int}</p>
-          <button onClick={() => this.handleIncrementStat('int')}>+</button>
-          <button onClick={() => this.handleDecrementStat('int')}>-</button>
-
-          <p>AGI: {stats.agi}</p>
-          <button onClick={() => this.handleIncrementStat('agi')}>+</button>
-          <button onClick={() => this.handleDecrementStat('agi')}>-</button>
-
-          <p>VIT: {stats.vit}</p>
-          <button onClick={() => this.handleIncrementStat('vit')}>+</button>
-          <button onClick={() => this.handleDecrementStat('vit')}>-</button>
-        </div>
+        <p>LEVEL: {level}</p>
+        <button onClick={this.handleLevelUp}>Level Up</button>
+        <Stats
+          stats={stats}
+          onIncrementStat={this.handleIncrementStat}
+          onDecrementStat={this.handleDecrementStat}
+        />
       </div>
     );
   }
