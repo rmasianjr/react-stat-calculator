@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stats from './Stats';
+import Stats from './Stats/Stats';
 import StatusInfo from './StatusInfo';
 import Header from './Header/Header';
 

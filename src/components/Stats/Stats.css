@@ -1,0 +1,33 @@
+.stats {
+  flex: 0 0 40%;
+}
+
+.stats-title {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+}
+
+.stat-controls {
+  font-size: 2.7rem;
+}
+
+.stat-controls span {
+  display: inline-block;
+  margin: 0.4rem;
+  cursor: pointer;
+  color: #d66360;
+}
+
+.stat-text {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.stat-text span {
+  color: #d66360;
+}
