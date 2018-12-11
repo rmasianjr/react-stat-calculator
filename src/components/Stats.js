@@ -18,7 +18,12 @@ class Stats extends Component {
   }
 
   render() {
-    return <ul>{this.renderStats()}</ul>;
+    return (
+      <div>
+        <h2>Stats</h2>
+        <ul>{this.renderStats()}</ul>
+      </div>
+    );
   }
 }
 

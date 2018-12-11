@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Stats from './Stats';
+import StatusInfo from './StatusInfo';
 
 class App extends Component {
   constructor(props) {
@@ -67,11 +68,14 @@ class App extends Component {
         <p>LEVEL: {level}</p>
         <button onClick={this.handleLevelUp}>Level Up</button>
         <p>Available SP: {spCount}</p>
-        <Stats
-          stats={stats}
-          onIncrementStat={this.handleIncrementStat}
-          onDecrementStat={this.handleDecrementStat}
-        />
+        <div className="content">
+          <Stats
+            stats={stats}
+            onIncrementStat={this.handleIncrementStat}
+            onDecrementStat={this.handleDecrementStat}
+          />
+          <StatusInfo stats={stats} />
+        </div>
       </div>
     );
   }
