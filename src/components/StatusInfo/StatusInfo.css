@@ -1,0 +1,17 @@
+.status-info {
+  flex: 0 0 40%;
+  font-size: 1.7rem;
+}
+
+.status-info-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.status-info p {
+  line-height: 1.45;
+}
+
+.status-info-value {
+  color: #d66360;
+}

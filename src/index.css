@@ -18,6 +18,7 @@ body {
   font-size: 1.6rem;
   color: #777;
   font-family: 'Chakra Petch', sans-serif;
+  background: #f7f7f7;
 }
 
 ul {
@@ -26,7 +27,7 @@ ul {
 
 .container {
   max-width: 72rem;
-  margin: 5rem auto;
+  margin: 2rem auto;
   border: 10px solid rgba(0, 0, 0, 0.8);
   border-bottom-width: 7rem;
   box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
@@ -44,4 +45,5 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 3rem 0;
 }

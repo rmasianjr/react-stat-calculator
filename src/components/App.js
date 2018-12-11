@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Stats from './Stats/Stats';
-import StatusInfo from './StatusInfo';
+import StatusInfo from './StatusInfo/StatusInfo';
 import Header from './Header/Header';
 
 class App extends Component {
