@@ -5,13 +5,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: 0,
+      level: 1,
       stats: {
         str: 0,
         int: 0,
         agi: 0,
         vit: 0
-      }
+      },
+      spCount: 0
     };
     this.handleIncrementStat = this.handleIncrementStat.bind(this);
     this.handleDecrementStat = this.handleDecrementStat.bind(this);
@@ -21,42 +22,51 @@ class App extends Component {
   handleLevelUp() {
     this.setState(prevState => {
       return {
-        level: prevState.level + 1
+        level: prevState.level + 1,
+        spCount: prevState.spCount + 3
       };
     });
   }
 
   handleIncrementStat(stat) {
     this.setState(prevState => {
-      console.log(prevState.stats);
-      const statsCopy = Object.assign({}, prevState.stats);
+      const { stats, spCount } = prevState;
+      if (spCount < 1) {
+        return;
+      }
+
+      const statsCopy = Object.assign({}, stats);
       statsCopy[stat] = statsCopy[stat] + 1;
       return {
-        stats: statsCopy
+        stats: statsCopy,
+        spCount: spCount - 1
       };
     });
   }
 
   handleDecrementStat(stat) {
     this.setState(prevState => {
-      const statsCopy = Object.assign({}, prevState.stats);
+      const { stats, spCount } = prevState;
+      const statsCopy = Object.assign({}, stats);
       statsCopy[stat] = statsCopy[stat] - 1;
       if (statsCopy[stat] < 0) {
         return;
       }
       return {
-        stats: statsCopy
+        stats: statsCopy,
+        spCount: spCount + 1
       };
     });
   }
 
   render() {
-    const { level, stats } = this.state;
+    const { level, stats, spCount } = this.state;
     return (
       <div className="container">
         <h1>Stat Calculator</h1>
         <p>LEVEL: {level}</p>
         <button onClick={this.handleLevelUp}>Level Up</button>
+        <p>Available SP: {spCount}</p>
         <Stats
           stats={stats}
           onIncrementStat={this.handleIncrementStat}
