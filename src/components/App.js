@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Stats from './Stats';
 import StatusInfo from './StatusInfo';
+import Header from './Header/Header';
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
     this.handleIncrementStat = this.handleIncrementStat.bind(this);
     this.handleDecrementStat = this.handleDecrementStat.bind(this);
     this.handleLevelUp = this.handleLevelUp.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleLevelUp() {
@@ -25,6 +27,21 @@ class App extends Component {
       return {
         level: prevState.level + 1,
         spCount: prevState.spCount + 3
+      };
+    });
+  }
+
+  handleReset() {
+    this.setState(() => {
+      return {
+        level: 1,
+        stats: {
+          str: 0,
+          int: 0,
+          agi: 0,
+          vit: 0
+        },
+        spCount: 0
       };
     });
   }
@@ -64,10 +81,12 @@ class App extends Component {
     const { level, stats, spCount } = this.state;
     return (
       <div className="container">
-        <h1>Stat Calculator</h1>
-        <p>LEVEL: {level}</p>
-        <button onClick={this.handleLevelUp}>Level Up</button>
-        <p>Available SP: {spCount}</p>
+        <Header
+          level={level}
+          spCount={spCount}
+          onLevelUp={this.handleLevelUp}
+          onReset={this.handleReset}
+        />
         <div className="content">
           <Stats
             stats={stats}
