@@ -31,3 +31,9 @@
 .stat-text span {
   color: #d66360;
 }
+
+@media screen and (max-width: 650px) {
+  .stats {
+    flex-basis: 45%;
+  }
+}

@@ -95,6 +95,28 @@ class App extends Component {
           />
           <StatusInfo stats={stats} />
         </div>
+        <footer className="footer">
+          <p>
+            Created by:{' '}
+            <a
+              href="https://twitter.com/rmasianjr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ricardo Masian Jr.
+            </a>
+          </p>
+          <p>
+            Link to{' '}
+            <a
+              href="https://github.com/rmasianjr/react-stat-calculator"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Repo
+            </a>
+          </p>
+        </footer>
       </div>
     );
   }

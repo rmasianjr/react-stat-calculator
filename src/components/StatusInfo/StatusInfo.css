@@ -15,3 +15,9 @@
 .status-info-value {
   color: #d66360;
 }
+
+@media screen and (max-width: 650px) {
+  .status-info {
+    flex-basis: 45%;
+  }
+}

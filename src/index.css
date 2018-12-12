@@ -27,13 +27,13 @@ ul {
 
 .container {
   max-width: 72rem;
-  margin: 2rem auto;
+  margin: 3rem auto auto auto;
   border: 10px solid rgba(0, 0, 0, 0.8);
   border-bottom-width: 7rem;
   box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  min-height: 85vh;
   background: #ecede7;
+  position: relative;
 }
 
 button {
@@ -46,4 +46,33 @@ button {
   justify-content: space-around;
   align-items: center;
   padding: 3rem 0;
+}
+
+.footer {
+  font-size: 1.4rem;
+  position: absolute;
+  color: #ecede7;
+  right: 0;
+  padding: 1rem;
+}
+
+.footer a {
+  color: #e1eab0;
+}
+
+/* media queries */
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 59%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 57%;
+  }
+
+  .container {
+    margin: 0;
+  }
 }
