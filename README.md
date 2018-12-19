@@ -1,3 +1,17 @@
+# react-stat-calculator
+
+A stat calculator based on rpg games.
+
+This project is for learning purposes only.
+
+## Live Demonstration
+
+Live project link: <https://rmasianjr.github.io/react-stat-calculator/>
+
+## Screenshot
+
+![screenshot](https://user-images.githubusercontent.com/37429704/50206579-cec54500-03a6-11e9-8b3a-12fe4449c13a.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
